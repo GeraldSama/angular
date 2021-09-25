@@ -2,19 +2,20 @@
   show es: {{ fondo }}
 </h1>
 <div class="container">
-  <button class="btn btn-dark mb-3 mx-1" (click)="fondo ='bg-dark'">dark</button>
-  <button class="btn btn-danger mb-3" (click)="fondo ='bg-danger'">danger</button>
-  <p class="text-info" [ngClass]="fondo">
+  <button class="btn btn-dark mb-3 mx-1" (click)="fondo = 'activo'">
+    activo
+  </button>
+  <button class="btn btn-danger mb-3" (click)="fondo = 'danger'">danger</button>
+  <p class="text-info d-none" [ngClass]="{ 'd-block': fondo == 'activo' }">
     Include every Bootstrap JavaScript plugin and dependency with one of our two
     bundles. Both bootstrap.bundle.js and bootstrap.bundle.min.js include Popper
     for our tooltips and popovers. For more information about what’s included in
     Bootstrap, please see our contents section.
   </p>
-  <ng-template #showDos>
-    <p class="text-danger">
-      Curious which components explicitly require our JavaScript and Popper?
-      Click the show components link below. If you’re at all unsure about the
-      general page structure, keep reading for an example page template.
-    </p>
-  </ng-template>
+
+  <p class="text-danger d-none" [ngClass]="{ 'd-block': fondo == 'danger' }">
+    Curious which components explicitly require our JavaScript and Popper? Click
+    the show components link below. If you’re at all unsure about the general
+    page structure, keep reading for an example page template.
+  </p>
 </div>
