@@ -1,10 +1,10 @@
 <h1 class="container bg-dark text-white text-center my-4 py-4">
-  show es: {{ show }}
+  show es: {{ fondo }}
 </h1>
 <div class="container">
-  <button class="btn btn-dark mb-3" (click)="show = false">primero</button>
-  <button class="btn btn-danger mb-3" (click)="show = true">segundo</button>
-  <p class="text-info" *ngIf="show; else showDos">
+  <button class="btn btn-dark mb-3 mx-1" (click)="fondo ='bg-dark'">dark</button>
+  <button class="btn btn-danger mb-3" (click)="fondo ='bg-danger'">danger</button>
+  <p class="text-info" [ngClass]="fondo">
     Include every Bootstrap JavaScript plugin and dependency with one of our two
     bundles. Both bootstrap.bundle.js and bootstrap.bundle.min.js include Popper
     for our tooltips and popovers. For more information about what’s included in
